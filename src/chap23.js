@@ -35,6 +35,10 @@ app.get('/contact',function(req,res){
     res.send('This is the contact page');
 });
 
+/*
+    Escuchamos en el puerto 3000
+*/
+
 app.listen(3000);
 
 /*
