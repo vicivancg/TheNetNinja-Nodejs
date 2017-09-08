@@ -9,11 +9,25 @@
         body{background: skyblue;font-family: Verdana;color: #fff;padding: 30px;}
         h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
         p{font-size: 16px; text-align: center;}
+        label{text-align: left;display: inline-block}
+        input{display: block;width: 80%;margin: 20px,10px;}
+        input[type=submit]{display: block;width: 40%;margin: 20px,10px;}
     </style>
 </head>
 <body>
+    <!-- Importamos la partial view -->
     <% include partials/nav.ejs %>
     <h1>Contactanos!</h1>
     <p>Contact the coolest cats on the web right here...</p>
+
+    <form id="contact-form">
+        <label for="who">A quien quieres contactar ?</label>
+        <input type="text" name="who" id="who" value="<%= qs.person %>"><br>
+        <label for="department">De que departamento ?</label>
+        <input type="text" name="department" id="department" value="<%= qs.dept %>"><br>
+        <label for="email">Tu email</label>
+        <input type="email" name="email" id="email"><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
