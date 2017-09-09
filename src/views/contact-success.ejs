@@ -18,16 +18,9 @@
     <!-- Importamos la partial view -->
     <% include partials/nav.ejs %>
     <h1>Contactanos!</h1>
-    <p>Contact the coolest cats on the web right here...</p>
+    <p>Thanks for getting in touch</p>
+    <p>Contactaste a <%= data.who %> del departamento de <%= data.department %></p>
+    <p>We will reply to you at <%= data.email %></p>
 
-    <form id="contact-form" method="POST" action="/contact">
-        <label for="who">A quien quieres contactar ?</label>
-        <input type="text" name="who" id="who" value="<%= qs.person %>"><br>
-        <label for="department">De que departamento ?</label>
-        <input type="text" name="department" id="department" value="<%= qs.dept %>"><br>
-        <label for="email">Tu email</label>
-        <input type="email" name="email" id="email"><br>
-        <input type="submit" value="Submit">
-    </form>
 </body>
 </html>
